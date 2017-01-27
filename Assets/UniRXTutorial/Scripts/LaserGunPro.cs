@@ -7,7 +7,6 @@ public class LaserGunPro : MonoBehaviour {
 
     void Start() {
         InputManagerObservable.Instance.FireLaser.Subscribe(numClicks => {
-            Debug.Log(numClicks);
             Color col = new Color(Random.value, Random.value, Random.value);
             _renderer.material.color = col;
         }).AddTo(this);
